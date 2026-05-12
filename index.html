@@ -1,13 +1,83 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="./js/main.js"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Редактируемое резюме</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <button id="download-btn" class="main-download-btn no-print">
+        <span>📥 Скачать PDF</span>
+    </button>
+
+    <main class="resume-card" id="resume">
+        <header class="top-row">
+            <div class="profile-block card">
+                <div class="avatar-placeholder">📸</div>
+                <div class="profile-text">
+                    <p contenteditable="true">Здравствуйте, меня зовут</p>
+                    <h1 contenteditable="true">Введите ФИО</h1>
+                    <p contenteditable="true">Введите информацию о том, кто вы</p>
+                </div>
+            </div>
+            
+            <div class="languages-block card">
+                <h3>Языки</h3>
+                <div class="lang-item">
+                    <span contenteditable="true">Поле для ввода</span>
+                    <div class="progress"><div class="fill" style="width: 90%;"></div></div>
+                </div>
+                <div class="lang-item">
+                    <span contenteditable="true">Поле для ввода</span>
+                    <div class="progress"><div class="fill" style="width: 80%;"></div></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-grid">
+            <section class="experience-col">
+                <h2>Опыт работы</h2>
+                <div class="exp-item card highlight">
+                    <span class="date" contenteditable="true">Поле для ввода 1</span>
+                    <div class="exp-header" contenteditable="true">
+                        <strong>Должность / Компания</strong>
+                        <p>Краткое описание обязанностей и достижений...</p>
+                    </div>
+                </div>
+                <div class="exp-item card">
+                    <span class="date" contenteditable="true">Поле для ввода 2</span>
+                    <div class="exp-header" contenteditable="true">
+                        <strong>Должность / Компания</strong>
+                        <p>Краткое описание...</p>
+                    </div>
+                </div>
+            </section>
+
+            <aside class="side-col">
+                <div class="tools-block card">
+                    <h3>Инструменты</h3>
+                    <div class="tool-icons" contenteditable="true">
+                        <div class="icon">Поле для ввода</div>
+                      
+                    </div>
+                </div>
+                
+                <div class="interests-block card">
+                    <h3>Интересы</h3>
+                    <div class="tags" contenteditable="true">
+                        <span>Поле для ввода</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <footer class="footer-block">
+            <p contenteditable="true">Давайте поболтаем! Я готов работать над интересными проектами</p>
+            <strong contenteditable="true">Поле для ввода электронной почты</strong>
+        </footer>
+    </main>
+
+    <script type="module" src="js/main.js"></script>
+</body>
 </html>
