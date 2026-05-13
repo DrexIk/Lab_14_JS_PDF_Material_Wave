@@ -97,7 +97,7 @@ body {
     border-radius: 4px;
 }
 
-/* Эффект волны */
+
 .wave {
     position: absolute;
     background: rgba(0, 0, 0, 0.1);
@@ -110,7 +110,6 @@ body {
 @keyframes ripple { to { transform: scale(4); opacity: 0; } }
 
 @media print {
-    /* Скрываем кнопку скачивания */
     .no-print { 
         display: none !important; 
     }
@@ -121,29 +120,29 @@ body {
         margin: 0;
     }
 
-    /* Форсируем печать фоновых цветов (зеленый блок и т.д.) */
+    
     * {
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
     }
 
-    /* Фиксируем ширину, чтобы сетка не "разлеталась" */
+    
     .resume-card { 
-        width: 210mm; /* Ширина листа A4 */
+        width: 210mm; 
         max-width: 100%;
         box-shadow: none !important;
         border: none !important;
         margin: 0 auto;
     }
 
-    /* Сохраняем структуру сетки (Grid) */
+    
     .top-row, .main-grid {
         display: grid !important;
         gap: 15px !important;
     }
 
     .card {
-        page-break-inside: avoid; /* Чтобы карточки не разрывались на две страницы */
+        page-break-inside: avoid;
     }
 }
 
